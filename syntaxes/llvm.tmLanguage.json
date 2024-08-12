@@ -131,6 +131,11 @@
           "match": "\\b(?<![%\\.])(null)\\b"
         },
         {
+          "comment": "none constants",
+          "name": "constant.language.none.llvm",
+          "match": "\\b(?<![%\\.])(none)\\b"
+        },
+        {
           "comment": "integer constants",
           "name": "constant.language.integer.llvm",
           "match": "\\b(?<![%\\.])(\\d+)(?!\\.)\\b"
