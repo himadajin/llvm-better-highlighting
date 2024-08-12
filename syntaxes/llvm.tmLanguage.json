@@ -6,6 +6,9 @@
       "include": "#keywords"
     },
     {
+      "include": "#basic-blocks"
+    },
+    {
       "include": "#instructions"
     },
     {
@@ -42,6 +45,34 @@
         {
           "name": "constant.language.llvm",
           "match": "\\b(?<![%\\.])(eq|ne|ugt|uge|ult|ule|sgt|sge|slt|sle)\\b"
+        }
+      ]
+    },
+    "basic-blocks": {
+      "patterns": [
+        {
+          "comment": "block labels",
+          "match": "([a-zA-Z0-9.-]*)(\\:)",
+          "captures": {
+            "1": {
+              "name": "constant.language.symbol.llvm"
+            },
+            "2": {
+              "name": "punctuation.separator.colon.llvm"
+            }
+          }
+        },
+        {
+          "comment": "label operand",
+          "match": "\\b(?<![%\\.])(label)(\\s*)([@%][A-Za-z0-9_\\-\\.]*)",
+          "captures": {
+            "1": {
+              "name": "entity.name.type.label.llvm"
+            },
+            "3": {
+              "name": "constant.language.symbol.llvm"
+            }
+          }
         }
       ]
     },
