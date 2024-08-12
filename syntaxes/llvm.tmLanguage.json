@@ -193,6 +193,16 @@
           "comment": "exp constants",
           "name": "constant.language.hex.llvm",
           "match": "\\b(?<![%!\\.])(\\d+)\\.(\\d+)e\\+(\\d+)\\b"
+        },
+        {
+          "comment": "zero initializations",
+          "name": "constant.language.zeroinitializer.llvm",
+          "match": "\\b(?<![%\\.])(zeroinitializer)\\b"
+        },
+        {
+          "comment": "poison values",
+          "name": "constant.language.poison.llvm",
+          "match": "\\b(?<![%\\.])(poison)\\b"
         }
       ]
     },
