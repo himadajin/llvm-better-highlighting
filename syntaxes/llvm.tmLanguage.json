@@ -153,9 +153,9 @@
     "types": {
       "patterns": [
         {
-          "comment": "void type",
-          "name": "entity.name.type.void.llvm",
-          "match": "\\b(?<![%\\.])(void)\\b"
+          "comment": "basic types",
+          "name": "entity.name.type.llvm",
+          "match": "\\b(?<![%\\.])(void|ptr)\\b"
         },
         {
           "comment": "integer type",
