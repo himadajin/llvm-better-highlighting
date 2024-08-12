@@ -21,6 +21,9 @@
       "include": "#constants"
     },
     {
+      "include": "#parameter-attributes"
+    },
+    {
       "include": "#comments"
     }
   ],
@@ -121,13 +124,55 @@
           "comment": "boolean constants",
           "name": "constant.language.boolean.llvm",
           "match": "\\b(?<![%\\.])(true|false)\\b"
-
         },
         {
           "comment": "null pointer constants",
           "name": "constant.language.null.llvm",
           "match": "\\b(?<![%\\.])(null)\\b"
-
+        }
+      ]
+    },
+    "parameter-attributes": {
+      "patterns": [
+        {
+          "comment": "parameter attributes",
+          "name": "keyword.other.llvm",
+          "match": "\\b(?<![%\\.])(zeroext|signext|inreg|byval|byref|preallocated|inalloca|sret)\\b"
+        },
+        {
+          "comment": "parameter attributes",
+          "name": "keyword.other.llvm",
+          "match": "\\b(?<![%\\.])(elementtype|align|noalias|nocapture|nofree|nest|returned)\\b"
+        },
+        {
+          "comment": "parameter attributes",
+          "name": "keyword.other.llvm",
+          "match": "\\b(?<![%\\.])(nonnull|dereferenceable|dereferenceable_or_null)\\b"
+        },
+        {
+          "comment": "parameter attributes",
+          "name": "keyword.other.llvm",
+          "match": "\\b(?<![%\\.])(swiftself|swiftasync|swifterror)\\b"
+        },
+        {
+          "comment": "parameter attributes",
+          "name": "keyword.other.llvm",
+          "match": "\\b(?<![%\\.])(immarg|noundef|nofpclass)\\b"
+        },
+        {
+          "comment": "parameter attributes",
+          "name": "keyword.other.llvm",
+          "match": "\\b(?<![%\\.])(alignstack|allocalign|allocptr)\\b"
+        },
+        {
+          "comment": "parameter attributes",
+          "name": "keyword.other.llvm",
+          "match": "\\b(?<![%\\.])(readnone|readonly|writeonly|writable)\\b"
+        },
+        {
+          "comment": "parameter attributes",
+          "name": "keyword.other.llvm",
+          "match": "\\b(?<![%\\.])(initializes|dead_on_unwind|range)\\b"
         }
       ]
     },
