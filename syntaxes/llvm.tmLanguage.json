@@ -45,6 +45,14 @@
         {
           "name": "constant.language.llvm",
           "match": "\\b(?<![%\\.])(eq|ne|ugt|uge|ult|ule|sgt|sge|slt|sle)\\b"
+        },
+        {
+          "name": "keyword.operator.assignment.llvm",
+          "match": "="
+        },
+        {
+          "name":"keyword.operator.to.llvm",
+          "match": "\\b(to)\\b"
         }
       ]
     },
