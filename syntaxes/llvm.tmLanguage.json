@@ -122,6 +122,12 @@
           "name": "constant.language.boolean.llvm",
           "match": "\\b(?<![%\\.])(true|false)\\b"
 
+        },
+        {
+          "comment": "null pointer constants",
+          "name": "constant.language.null.llvm",
+          "match": "\\b(?<![%\\.])(null)\\b"
+
         }
       ]
     },
