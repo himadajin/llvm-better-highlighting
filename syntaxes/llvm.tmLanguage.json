@@ -51,7 +51,7 @@
           "match": "="
         },
         {
-          "name":"keyword.operator.to.llvm",
+          "name": "keyword.operator.to.llvm",
           "match": "\\b(to)\\b"
         }
       ]
@@ -160,19 +160,9 @@
     "constants": {
       "patterns": [
         {
-          "comment": "boolean constants",
-          "name": "constant.language.boolean.llvm",
-          "match": "\\b(?<![%\\.])(true|false)\\b"
-        },
-        {
-          "comment": "null pointer constants",
-          "name": "constant.language.null.llvm",
-          "match": "\\b(?<![%\\.])(null)\\b"
-        },
-        {
-          "comment": "none constants",
-          "name": "constant.language.none.llvm",
-          "match": "\\b(?<![%\\.])(none)\\b"
+          "comment": "basic constants",
+          "name": "constant.language.llvm",
+          "match": "\\b(?<![%\\.])(true|false|null|none|zeroinitializer|poison)\\b"
         },
         {
           "comment": "integer constants",
@@ -193,16 +183,6 @@
           "comment": "exp constants",
           "name": "constant.language.hex.llvm",
           "match": "\\b(?<![%!\\.])(\\d+)\\.(\\d+)e\\+(\\d+)\\b"
-        },
-        {
-          "comment": "zero initializations",
-          "name": "constant.language.zeroinitializer.llvm",
-          "match": "\\b(?<![%\\.])(zeroinitializer)\\b"
-        },
-        {
-          "comment": "poison values",
-          "name": "constant.language.poison.llvm",
-          "match": "\\b(?<![%\\.])(poison)\\b"
         }
       ]
     },
