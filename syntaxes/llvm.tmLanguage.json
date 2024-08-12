@@ -129,6 +129,26 @@
           "comment": "null pointer constants",
           "name": "constant.language.null.llvm",
           "match": "\\b(?<![%\\.])(null)\\b"
+        },
+        {
+          "comment": "integer constants",
+          "name": "constant.language.integer.llvm",
+          "match": "\\b(?<![%\\.])(\\d+)(?!\\.)\\b"
+        },
+        {
+          "comment": "float constants",
+          "name": "constant.language.float.llvm",
+          "match": "\\b(?<![%!\\.])(\\d+)\\.(\\d+)\\b"
+        },
+        {
+          "comment": "hex constants",
+          "name": "constant.language.hex.llvm",
+          "match": "\\b(?<![%!\\.])(0(x|X)[0-9a-fA-F]+)\\b"
+        },
+        {
+          "comment": "exp constants",
+          "name": "constant.language.hex.llvm",
+          "match": "\\b(?<![%!\\.])(\\d+)\\.(\\d+)e\\+(\\d+)\\b"
         }
       ]
     },
