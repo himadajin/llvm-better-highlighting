@@ -18,6 +18,9 @@
       "include": "#types"
     },
     {
+      "include": "#constants"
+    },
+    {
       "include": "#comments"
     }
   ],
@@ -109,6 +112,16 @@
           "comment": "floating-point types",
           "name": "entity.name.type.float.llvm",
           "match": "\\b(?<![%\\.])(half|bfloat|float|double|fp128|x86_fp80|ppc_fp128)"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "comment": "boolean constants",
+          "name": "constant.language.boolean.llvm",
+          "match": "\\b(?<![%\\.])(true|false)\\b"
+
         }
       ]
     },
