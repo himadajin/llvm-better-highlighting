@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "LLVM-IR",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#instructions"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#comments"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "comment": "basic keywords",
+          "name": "entity.name.function",
+          "match": "\\b(?<![%\\.])(attributes|declare|exact|extractelement|extractvalue|global|insertelement|insertvalue|one|ord|shufflevector|target|trunc|type|unwind)\\b"
+        },
+        {
+          "name": "keyword.type.function.llvm",
+          "match": "\\b(?<![%\\.])(define)\\b"
+        },
+        {
+          "name": "constant.language.llvm",
+          "match": "\\b(?<![%\\.])(eq|ne|ugt|uge|ult|ule|sgt|sge|slt|sle)\\b"
+        }
+      ]
+    },
+    "instructions": {
+      "patterns": [
+        {
+          "comment": "terminator instructions",
+          "name": "keyword.control.llvm",
+          "match": "\\b(?<![%\\.])(ret|br|switch|indirectbr|invoke|callbr|resume|catchswitch|catchret|cleanupret|unreachable)\\b"
+        },
+        {
+          "comment": "unary operations",
+          "name": "entity.name.function",
+          "match": "\\b(?<![%\\.])(fneg)\\b"
+        },
+        {
+          "comment": "binary operations",
+          "name": "entity.name.function",
+          "match": "\\b(?<![%\\.])(add|fadd|sub|fsub|mul|fmul|udiv|sdiv|fdiv|urem|srem|frem)\\b"
+        },
+        {
+          "comment": "bitwise binary operations",
+          "name": "entity.name.function",
+          "match": "\\b(?<![%\\.])(shl|lshr|ashr|and|or|xor)\\b"
+        },
+        {
+          "comment": "memory access and addressing operations",
+          "name": "entity.name.function",
+          "match": "\\b(?<![%\\.])(alloca|load|store|fence|cmpxchg|atomicrmw|getelementptr)\\b"
+        },
+        {
+          "comment": "conversion operations",
+          "name": "entity.name.function",
+          "match": "\\b(?<![%\\.])(trunk|zext|sext|fptrunc|fpext|fptoui|fptosi|uitofp|sitofp|ptrtoint|inttoptr|bitcast|addrspacecast)\\b"
+        },
+        {
+          "comment": "other operations",
+          "name": "entity.name.function",
+          "match": "\\b(?<![%\\.])(icmp|fcmp|phi|select|freeze|call|va_arg|landingpad|catchpad|cleanuppad)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.llvm",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.llvm",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "variables": {
+      "name": "variable.other.llvm",
+      "match": "[@%][A-Za-z0-9_\\-\\.]*"
+    },
+    "types": {
+      "patterns": [
+        {
+          "comment": "void type",
+          "name": "entity.name.type.void.llvm",
+          "match": "\\b(?<![%\\.])(void)\\b"
+        },
+        {
+          "comment": "integer type",
+          "name": "entity.name.type.integer.llvm",
+          "match": "\\b(?<![%\\.])(i[1-9][0-9]*)\\b"
+        },
+        {
+          "comment": "floating-point types",
+          "name": "entity.name.type.float.llvm",
+          "match": "\\b(?<![%\\.])(half|bfloat|float|double|fp128|x86_fp80|ppc_fp128)"
+        }
+      ]
+    },
+    "comments": {
+      "name": "comment.line",
+      "match": ";.*$"
+    }
+  },
+  "scopeName": "source.ll"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "llvm-better-highlighting",
+  "displayName": "llvm-better-highlighting",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "llvm",
+      "aliases": ["LLVM-IR", "llvm"],
+      "extensions": [".ll"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "llvm",
+      "scopeName": "source.ll",
+      "path": "./syntaxes/llvm.tmLanguage.json"
+    }]
+  }
+}
