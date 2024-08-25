@@ -60,7 +60,7 @@
       "patterns": [
         {
           "comment": "block labels",
-          "match": "([a-zA-Z0-9.-]*)(\\:)",
+          "match": "([a-zA-Z0-9\\-\\$\\._]*)(\\:)",
           "captures": {
             "1": {
               "name": "constant.language.symbol.llvm"
@@ -72,7 +72,7 @@
         },
         {
           "comment": "label operand",
-          "match": "\\b(?<![%\\.])(label)(\\s*)([@%][A-Za-z0-9_\\-\\.]*)",
+          "match": "\\b(?<![%\\.])(label)(\\s*)([@%][a-zA-Z0-9\\-\\$\\._]*)",
           "captures": {
             "1": {
               "name": "entity.name.type.label.llvm"
@@ -138,7 +138,7 @@
       "patterns": [
         {
           "name": "variable.other.llvm",
-          "match": "[@%][A-Za-z0-9_\\-\\.]*"
+          "match": "[@%][a-zA-Z0-9\\-\\$\\._]*"
         },
         {
           "name": "variable.language.llvm",
