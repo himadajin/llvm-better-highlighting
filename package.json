@@ -1,8 +1,9 @@
 {
   "name": "llvm-better-highlighting",
   "displayName": "llvm-better-highlighting",
-  "description": "",
+  "description": "LLVM syntax highlighting",
   "version": "0.0.1",
+  "publisher": "himadajin",
   "engines": {
     "vscode": "^1.92.0"
   },
@@ -10,16 +11,30 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "llvm",
-      "aliases": ["LLVM-IR", "llvm"],
-      "extensions": [".ll"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "llvm",
-      "scopeName": "source.ll",
-      "path": "./syntaxes/llvm.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "llvm",
+        "aliases": [
+          "LLVM-IR",
+          "llvm"
+        ],
+        "extensions": [
+          ".ll"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "llvm",
+        "scopeName": "source.ll",
+        "path": "./syntaxes/llvm.tmLanguage.json"
+      }
+    ]
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/himadajin/llvm-better-highlighting"
   }
 }
