@@ -114,7 +114,7 @@
         {
           "comment": "conversion operations",
           "name": "entity.name.function",
-          "match": "\\b(?<![%\\.])(trunk|zext|sext|fptrunc|fpext|fptoui|fptosi|uitofp|sitofp|ptrtoint|inttoptr|bitcast|addrspacecast)\\b"
+          "match": "\\b(?<![%\\.])(trunc|zext|sext|fptrunc|fpext|fptoui|fptosi|uitofp|sitofp|ptrtoint|inttoptr|bitcast|addrspacecast)\\b"
         },
         {
           "comment": "other operations",
