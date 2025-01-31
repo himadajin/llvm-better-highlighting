@@ -47,7 +47,7 @@
         },
         {
           "name": "constant.language.llvm",
-          "match": "\\b(?<![%\\.])(eq|ne|ugt|uge|ult|ule|sgt|sge|slt|sle)\\b"
+          "match": "\\b(?<![%\\.])(eq|ne|ugt|uge|ult|ule|sgt|sge|slt|sle|nuw|nsw)\\b"
         },
         {
           "name": "keyword.operator.assignment.llvm",
