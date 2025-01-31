@@ -239,6 +239,11 @@
           "comment": "parameter attributes",
           "name": "keyword.other.llvm",
           "match": "\\b(?<![%\\.])(initializes|dead_on_unwind|range)\\b"
+        },
+        {
+          "comment": "parameter attributes",
+          "name": "keyword.other.llvm",
+          "match": "\\b(?<![%\\.])(volatile)\\b"
         }
       ]
     },
