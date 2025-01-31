@@ -92,34 +92,34 @@
           "match": "\\b(?<![%\\.])(ret|br|switch|indirectbr|invoke|resume|unreachable|cleanupret|catchret|catchpad|catchswitch|callbr)\\b"
         },
         {
-          "comment": "unary operations",
-          "name": "entity.name.function",
+          "comment": "standard unary operators",
+          "name": "entity.name.function.llvm",
           "match": "\\b(?<![%\\.])(fneg)\\b"
         },
         {
-          "comment": "binary operations",
-          "name": "entity.name.function",
+          "comment": "standard binary operators",
+          "name": "entity.name.function.llvm",
           "match": "\\b(?<![%\\.])(add|fadd|sub|fsub|mul|fmul|udiv|sdiv|fdiv|urem|srem|frem)\\b"
         },
         {
-          "comment": "bitwise binary operations",
-          "name": "entity.name.function",
-          "match": "\\b(?<![%\\.])(shl|lshr|ashr|and|or|xor)\\b"
+          "comment": "logical operators",
+          "name": "entity.name.function.llvm",
+          "match": "\\b(?<![%\\.])(and|or|xor)\\b"
         },
         {
-          "comment": "memory access and addressing operations",
-          "name": "entity.name.function",
-          "match": "\\b(?<![%\\.])(alloca|load|store|fence|cmpxchg|atomicrmw|getelementptr)\\b"
+          "comment": "memory instructions",
+          "name": "entity.name.function.llvm",
+          "match": "\\b(?<![%\\.])(alloca|load|store|cmpxchg|atomicrmw|fence|getelementptr)\\b"
         },
         {
-          "comment": "conversion operations",
-          "name": "entity.name.function",
-          "match": "\\b(?<![%\\.])(trunc|zext|sext|fptrunc|fpext|fptoui|fptosi|uitofp|sitofp|ptrtoint|inttoptr|bitcast|addrspacecast)\\b"
+          "comment": "conversion instructions",
+          "name": "entity.name.function.llvm",
+          "match": "\\b(?<![%\\.])(trunc|zext|sext|fptrunc|fpext|fptoui|fptosi|uitofp|sitofp|inttoptr|ptrtoint|bitcast|addrspacecast)\\b"
         },
         {
-          "comment": "other operations",
-          "name": "entity.name.function",
-          "match": "\\b(?<![%\\.])(icmp|fcmp|phi|select|freeze|call|va_arg|landingpad|catchpad|cleanuppad)\\b"
+          "comment": "other instructions",
+          "name": "entity.name.function.llvm",
+          "match": "\\b(?<![%\\.])(icmp|fcmp|phi|select|call|shl|lshr|ashr|va_arg|extractelement|insertelement|shufflevector|extractvalue|insertvalue|landingpad|cleanuppad|freeze)\\b"
         }
       ]
     },
