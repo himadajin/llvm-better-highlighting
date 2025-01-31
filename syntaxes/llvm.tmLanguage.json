@@ -39,7 +39,7 @@
         {
           "comment": "basic keywords",
           "name": "entity.name.function",
-          "match": "\\b(?<![%\\.])(attributes|declare|exact|extractelement|extractvalue|global|insertelement|insertvalue|one|ord|shufflevector|trunc|type|unwind)\\b"
+          "match": "\\b(?<![%\\.])(attributes|declare|exact|extractelement|extractvalue|global|inbounds|insertelement|insertvalue|one|ord|shufflevector|trunc|type|unwind)\\b"
         },
         {
           "name": "keyword.type.function.llvm",
