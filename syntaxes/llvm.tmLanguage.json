@@ -88,8 +88,8 @@
       "patterns": [
         {
           "comment": "terminator instructions",
-          "name": "keyword.control.llvm",
-          "match": "\\b(?<![%\\.])(ret|br|switch|indirectbr|invoke|callbr|resume|catchswitch|catchret|cleanupret|unreachable)\\b"
+          "name": "keyword.control.terminator.llvm",
+          "match": "\\b(?<![%\\.])(ret|br|switch|indirectbr|invoke|resume|unreachable|cleanupret|catchret|catchpad|catchswitch|callbr)\\b"
         },
         {
           "comment": "unary operations",
