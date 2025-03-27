@@ -130,7 +130,12 @@
         {
           "comment": "other instructions",
           "name": "entity.name.function.llvm",
-          "match": "\\b(?<![%\\.])(icmp|fcmp|phi|select|call|shl|lshr|ashr|va_arg|extractelement|insertelement|shufflevector|extractvalue|insertvalue|landingpad|cleanuppad|freeze)\\b"
+          "match": "\\b(?<![%\\.])(icmp|fcmp|phi|select|shl|lshr|ashr|va_arg|extractelement|insertelement|shufflevector|extractvalue|insertvalue|landingpad|cleanuppad|freeze)\\b"
+        },
+        {
+          "comment": "call instruction",
+          "match": "\\b(?<![%\\.])(tail|musttail|notail)?\\s+(call)\\b",
+          "name": "entity.name.function.llvm"
         }
       ]
     },
