@@ -154,7 +154,7 @@
       "patterns": [
         {
           "name": "variable.other.llvm",
-          "match": "[@%][a-zA-Z0-9\\-\\$\\._]*"
+          "match": "[@#%][a-zA-Z0-9\\-\\$\\._]*"
         },
         {
           "name": "variable.language.llvm",
@@ -190,27 +190,27 @@
         {
           "comment": "basic constants",
           "name": "constant.language.llvm",
-          "match": "\\b(?<![%\\.])(true|false|null|none|zeroinitializer|poison)\\b"
+          "match": "\\b(?<![!#%\\.])(true|false|null|none|zeroinitializer|poison)\\b"
         },
         {
           "comment": "integer constants",
           "name": "constant.language.integer.llvm",
-          "match": "\\b(?<![%\\.])(\\d+)(?!\\.)\\b"
+          "match": "\\b(?<![!#%\\.])(\\d+)(?!\\.)\\b"
         },
         {
           "comment": "float constants",
           "name": "constant.language.float.llvm",
-          "match": "\\b(?<![%!\\.])(\\d+)\\.(\\d+)\\b"
+          "match": "\\b(?<![!#%\\.])(\\d+)\\.(\\d+)\\b"
         },
         {
           "comment": "hex constants",
           "name": "constant.language.hex.llvm",
-          "match": "\\b(?<![%!\\.])(0(x|X)[0-9a-fA-F]+)\\b"
+          "match": "\\b(?<![!#%\\.])(0(x|X)[0-9a-fA-F]+)\\b"
         },
         {
           "comment": "exp constants",
           "name": "constant.language.hex.llvm",
-          "match": "\\b(?<![%!\\.])(\\d+)\\.(\\d+)e\\+(\\d+)\\b"
+          "match": "\\b(?<![!#%\\.])(\\d+)\\.(\\d+)e\\+(\\d+)\\b"
         }
       ]
     },
