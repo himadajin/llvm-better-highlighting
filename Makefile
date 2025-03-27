@@ -1,16 +1,21 @@
-version=0.0.1
-vsix=llvm-better-highlighting-$(version).vsix
+BUILD_DIR:=build
 
-.PHONY: build
-build: $(vsix)
+version=$(shell jq -r ".version" package.json)
+vsix=$(BUILD_DIR)/llvm-better-highlighting-$(version).vsix
+
+.PHONY: package
+package: $(vsix)
 
 .PHONY: install
 install: $(vsix)
 	code --install-extension $(vsix)
 
-$(vsix): language-configuration.json syntaxes/llvm.tmLanguage.json
+$(vsix): language-configuration.json package.json syntaxes/llvm.tmLanguage.json | $(BUILD_DIR)
 	npx vsce package -o $@
+
+$(BUILD_DIR):
+	mkdir -p $@
 
 .PHONY: clean
 clean:
-	$(RM) $(vsix)
+	rm -rf $(BUILD_DIR)
