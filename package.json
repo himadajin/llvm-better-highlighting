@@ -1,7 +1,7 @@
 {
   "name": "llvm-better-highlighting",
-  "displayName": "llvm-better-highlighting",
-  "description": "LLVM syntax highlighting",
+  "displayName": "LLVM Better Highlighting",
+  "description": "Syntax highlighting of LLVM IR",
   "version": "0.0.1",
   "publisher": "himadajin",
   "engines": {
