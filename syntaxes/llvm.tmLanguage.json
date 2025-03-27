@@ -56,6 +56,14 @@
         {
           "name": "keyword.operator.to.llvm",
           "match": "\\b(to)\\b"
+        },
+        {
+          "name": "keyword.other.llvm",
+          "match": "\\b(dso_preemptable|dso_local)\\b"
+        },
+        {
+          "name": "keyword.other.llvm",
+          "match": "\\b((unnamed_addr|local_unnamed_addr))\\b"
         }
       ]
     },
