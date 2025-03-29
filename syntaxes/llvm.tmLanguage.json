@@ -134,7 +134,7 @@
         },
         {
           "comment": "call instruction",
-          "match": "\\b(?<![%\\.])(tail|musttail|notail)?\\s+(call)\\b",
+          "match": "\\b(?<![%\\.])(((tail|musttail|notail)\\s+)?call)\\b",
           "name": "entity.name.function.llvm"
         }
       ]
