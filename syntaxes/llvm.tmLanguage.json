@@ -12,10 +12,10 @@
       "include": "#instructions"
     },
     {
-      "include": "#strings"
+      "include": "#variables"
     },
     {
-      "include": "#variables"
+      "include": "#strings"
     },
     {
       "include": "#types"
@@ -144,21 +144,16 @@
         }
       ]
     },
-    "strings": {
-      "name": "string.quoted.double.llvm",
-      "begin": "\"",
-      "end": "\"",
-      "patterns": [
-        {
-          "name": "constant.character.escape.llvm",
-          "match": "\\\\."
-        }
-      ]
-    },
     "variables": {
       "patterns": [
         {
           "name": "variable.other.llvm",
+          "comment": "Quoted variable names",
+          "match": "([@#%])(\")([^\"\\\\]*(?:\\\\.[^\"\\\\]*)*)(\")"
+        },
+        {
+          "name": "variable.other.llvm",
+          "comment": "Unquoted variables names",
           "match": "[@#%][a-zA-Z0-9\\-\\$\\._]*"
         },
         {
@@ -168,6 +163,17 @@
         {
           "name": "variable.language.llvm",
           "match": "\\b(target)\\s*(triple|datalayout)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.llvm",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.llvm",
+          "match": "\\\\."
         }
       ]
     },
