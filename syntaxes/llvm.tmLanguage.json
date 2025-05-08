@@ -64,6 +64,11 @@
         {
           "name": "keyword.other.llvm",
           "match": "\\b((unnamed_addr|local_unnamed_addr))\\b"
+        },
+        {
+          "name": "keyword.other.llvm",
+          "comment": "Linkage types",
+          "match": "\\b(?<![%\\.])(private|internal|available_externally|linkonce|weak|common|appending|extern_weak|linkonce_odr|weak_odr|external)\\b"
         }
       ]
     },
