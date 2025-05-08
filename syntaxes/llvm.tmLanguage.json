@@ -201,7 +201,7 @@
         {
           "comment": "basic constants",
           "name": "constant.language.llvm",
-          "match": "\\b(?<![!#%\\.])(true|false|null|none|zeroinitializer|poison)\\b"
+          "match": "\\b(?<![!#%\\.])(true|false|null|none|zeroinitializer|poison|undef)\\b"
         },
         {
           "comment": "integer constants",
