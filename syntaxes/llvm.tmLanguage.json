@@ -24,7 +24,7 @@
       "include": "#constants"
     },
     {
-      "include": "#parameter-attributes"
+      "include": "#attributes"
     },
     {
       "include": "#comments"
@@ -230,7 +230,7 @@
         }
       ]
     },
-    "parameter-attributes": {
+    "attributes": {
       "patterns": [
         {
           "comment": "parameter attributes",
@@ -276,6 +276,16 @@
           "comment": "parameter attributes",
           "name": "keyword.other.llvm",
           "match": "\\b(?<![%\\.])(volatile)\\b"
+        },
+        {
+          "comment": "general function attributes",
+          "name": "keyword.other.llvm",
+          "match": "\\b(?<![%\\.])(alwaysinline|builtin|cold|convergent|disable_sanitizer_instrumentation|fn_ret_thunk_extern|hot|inlinehint|jumptable|minsize|naked|no-jump-tables|nobuiltin|nocallback|nodivergencesource|noduplicate|nofree|noimplicitfloat|noinline|nomerge|nonlazybind|noprofile|skipprofile|noredzone|indirect-tls-seg-refs|noreturn|norecurse|willreturn|nosync|nounwind|nosanitize_bounds|nosanitize_coverage|null_pointer_is_valid|optdebug|optforfuzzing|optnone|optsize|returns_twice|safestack|sanitize_address|sanitize_memory|sanitize_thread|sanitize_hwaddress|sanitize_memtag|sanitize_realtime|sanitize_realtime_blocking|speculative_load_hardening|speculatable|ssp|sspstrong|sspreq|strictfp|nocf_check|shadowcallstack|mustprogress)\\b"
+        },
+        {
+          "comment": "function attributes with arguments",
+          "name": "keyword.other.llvm",
+          "match": "\\b(?<![%\\.])(alignstack|allockind|allocsize|memory|uwtable|vscale_range)\\b"
         }
       ]
     },
