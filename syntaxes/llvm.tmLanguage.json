@@ -39,7 +39,12 @@
         {
           "comment": "basic keywords",
           "name": "entity.name.function",
-          "match": "\\b(?<![%\\.])(attributes|declare|exact|extractelement|extractvalue|global|inbounds|insertelement|insertvalue|one|ord|shufflevector|trunc|type|unwind)\\b"
+          "match": "\\b(?<![%\\.])(attributes|declare|exact|extractelement|extractvalue|inbounds|insertelement|insertvalue|one|ord|shufflevector|trunc|type|unwind)\\b"
+        },
+        {
+          "comment": "global variable keywords",
+          "name": "keyword.other.llvm",
+          "match": "\\b(?<![%\\.])(constant|global)\\b"
         },
         {
           "name": "keyword.type.function.llvm",
