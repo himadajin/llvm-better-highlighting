@@ -2,7 +2,7 @@
   "name": "llvm-better-highlighting",
   "displayName": "LLVM Better Highlighting",
   "description": "Syntax highlighting of LLVM IR",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "publisher": "himadajin",
   "engines": {
     "vscode": "^1.92.0"
